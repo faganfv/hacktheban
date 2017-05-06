@@ -1,5 +1,5 @@
-# Hack the Ban DC
-## Team: Knowledge is Power
+# Immigration Rights Hub
+## Team: Knowledge is Power from Hack the Ban DC
 
 Making it easy to get answers to your immigration status questions.
 
