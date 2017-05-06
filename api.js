@@ -55,6 +55,7 @@ function search(res, query) {
   searchTerms = searchTerms.toLowerCase();
   var searchTermsArray = searchTerms.split(" ");
   var search = data.filter(function(item) {
+		"use strict";
     let match = true;
     searchTermsArray.forEach(function(term, index, arr){
         match = match && JSON.stringify(item).toLowerCase().includes(term);
