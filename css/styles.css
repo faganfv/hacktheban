@@ -117,3 +117,8 @@ html, body {
   color: #fff;
   text-decoration: none;
 }
+
+.question-card {
+  display: flex;
+  flex-direction: column !important;
+}

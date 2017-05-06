@@ -12,7 +12,7 @@ function callSearch() {
       section.innerHTML = '';
       for(i=0; i < questions.length; i++) {
         section.innerHTML = section.innerHTML +
-        "<div class=\"mdl-cell mdl-cell--12-col question-card mdl-card mdl-shadow--2dp\"><div class=\"demo-card-wide mdl-card mdl-shadow--2dp\"><div class=\"mdl-card__title\"><h1 class=\"mdl-card__title-text\">" + questions[i] + "</h1><hr></div><div class=\"mdl-card__supporting-text\">" + answers[i] + "</div><div class=\"mdl-card__actions mdl-card--border\">" + authors[i] + ", " + dates[i] + "</div><div class=\"mdl-card__menu\"><button class=\"mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect\"><i class=\"material-icons\">share</i></button></div>";
+        "<div class=\"question-card\"><div class=\"mdl-cell mdl-cell--12-col question-card mdl-card mdl-shadow--2dp\"><div class=\"demo-card-wide mdl-card mdl-shadow--2dp\"><div class=\"mdl-card__title\"><h1 class=\"mdl-card__title-text\">" + questions[i] + "</h1><hr></div><div class=\"mdl-card__supporting-text\">" + answers[i] + "</div><div class=\"mdl-card__actions mdl-card--border\">" + authors[i] + ", " + dates[i] + "</div></div>";
       }
     }
   };
