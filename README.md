@@ -1,5 +1,5 @@
-# Hack the Ban DC
-## Team: Knowledge is Power
+# Immigration Rights Hub
+## Team: Knowledge is Power from Hack the Ban DC
 
 Making it easy to get answers to your immigration status questions.
 
@@ -21,4 +21,4 @@ Making it easy to get answers to your immigration status questions.
 | /search?query=alpha%20beta | Return all questions where a field contains "alpha" and a field contains "beta". Not case sensitive. Matches partial words. |
 
 ## Content
-Lawyers: Want to add to our database of answers? Submit a pull request. All submissions will be vetted by a second lawyer before inclusion in the database.
+Lawyers: Want to add to our database of answers? Submit a pull request. All submissions will be vetted before inclusion in the database.
