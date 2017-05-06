@@ -1,47 +1,41 @@
 //jshint esversion: 6
-var http = require("http");
+
 var data = require("../data/faq");
-var fs = require("fs");
-var auto = fs.readFileSync("./testautocomplete.html");
-var ajax = fs.readFileSync("./js/ajaxcomplete.js");
-var index = fs.readFileSync("./index.html");
-var css = fs.readFileSync("./css/styles.css");
-
-http.createServer(function(req, res) {
-	if (req.url === "/") {
-		res.writeHead(200, {"Content-Type": "text/html"});
-	    res.end(index);
-	} else if (req.url === "/q") {
-		res.writeHead(200, {"Content-Type": "text/json"});
-	  res.end(JSON.stringify(data));
-	} else if (req.url === "/en") {
-		listEnglish(res);
-	} else if (req.url === "/es") {
-		listEspanol(res);
-	} else if (req.url === "/autocomplete") {
-		res.writeHead(200, {"Content-Type": "text/html"});
-		res.end(auto);
-	} else if (req.url === "/css/styles.css") {
-		res.writeHead(200, {"Content-Type": "text/css"});
-		res.end(css);
-	} else if (req.url === "/js/ajaxcomplete.js") {
-		res.writeHead(200, {"Content-Type": "text/html"});
-		res.end(ajax);
-  } else if (req.url.slice(0,7) === "/search") {
-    var url = require('url');
-    var url_parts = url.parse(req.url, true);
-    var query = url_parts.query;
-    search(res, query);
-	} else {
-		res.writeHead(404, {"Content-Type": "text/plain"});
-		res.end("Whoops... Data not found");
-	}
+var express = require("express");
+var cors = require("cors");
+var bodyParser = require("body-parser");
+var app = express();
 
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-}).listen(3000);
+app.use(function(req, res, next) {
+	console.log(`${req.method} request for '${req.url}' - ${JSON.stringify(req.body)}`);
+	next();
+});
 
-console.log("Server listening on port 3000");
+app.use(express.static("."));
+
+app.use(cors());
+
+app.get("/q", function(req, res) {
+	res.json(data);
+});
+app.get("/en", function(req, res) {
+	listEnglish(res);
+});
+app.get("/es", function(req, res) {
+	listEspanol(res);
+});
+app.get("/search", function(req, res) {
+	var query = req.query
+	search(res, query);
+});
+
+app.listen(3000);
+
+console.log("Express app running on port 3000");
 
 
 function listEnglish(res) {
