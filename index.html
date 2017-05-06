@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -17,69 +19,110 @@
 
 <body>
 
-  <header>
-
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <div class="navbar-header">
-        <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">Knowledge is Power</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active"><a href="#" class="nav-link">Home <span class="sr-only">(current)</span></a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">API</a></li>
-          </ul>
-        </div>
-        <form class="form-inline form-group row">
-          <label for="search" class="col-2 col-form-label"><i class="material-icons">search</i></label>
-          <div class="col-10">
-            <input id="search" class="form-control" type="text" placeholder="Search">
-          </div>
-        </form>
-      </div>
-    </nav>
-
-  </header>
-
   <div class="container">
 
-    <section>
+    <header>
+      <nav class="">
+        <!-- Left aligned menu below button -->
+        <button id="demo-menu-lower-left" class="mdl-button mdl-js-button mdl-button--icon">
+          <i class="material-icons">more_vert</i>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-left">
+          <li class="mdl-menu__item">Immigrant Questions</li>
+          <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Legal Resources</li>
+          <li class="mdl-menu__item">Ask a Question</li>
+          <li class="mdl-menu__item">About This Site</li>
+          <li class="mdl-menu__item">Write and Translate for Us</li>
+          <li class="mdl-menu__item">API</li>
+        </ul>
+
+      </nav>
+    </header>
+
+    <main class="main">
+
+      <h2 class="main-text logo">Free answers to your immigration questions</h2>
+
+    </main>
+
+    <section class="cards">
       <div class="question-card mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text"><span class="question">Q:</span>What can I do to obtain my legal residence?</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="answer">A:</span><p>Do this, this, this, and this! No problem!</p>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <div class="verified-lawyer">Answered by John Doe verified✓ Lawyer from D.C.</div>
+
+        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+
+            <h1 class="mdl-card__title-text">Top Questions</h1>
+
+          </div>
+
+          <div class="mdl-card__supporting-text">
+            <ul class="top-q-ul">
+              <li class="q-item">
+
+                <i class="fa fa-question-circle-o q-icon" aria-hidden="true"></i>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Mauris sagittis pellentesque lacus eleifend lacinia...</a>
+
+              </li>
+              <li class="q-item">
+                
+                <i class="fa fa-question-circle-o q-icon" aria-hidden="true"></i>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Mauris sagittis pellentesque lacus eleifend lacinia...</a>
+
+              </li>
+              <li class="q-item">
+                
+                <i class="fa fa-question-circle-o q-icon" aria-hidden="true"></i>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Mauris sagittis pellentesque lacus eleifend lacinia...</a>
+
+              </li>
+            </ul>
+          </div>
+
+          <div class="mdl-card__actions mdl-card--border">
+
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+              ALL TOP QUESTIONS
+            </a>
+          </div>
+
+          <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
+          </div>
         </div>
       </div>
 
-      <div class="question-card mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text"><span class="question">Q:</span>What can I do to obtain my legal residence?</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="answer">A:</span><p>Do this, this, this, and this! No problem!</p>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <div class="verified-lawyer">Answered by John Doe verified✓ Lawyer from D.C.</div>
-        </div>
-      </div>
+
     </section>
 
-    <footer class="footer text-center">
-      <hr>
-      <p>HackTheBan 2017</p>
+    <!--<div class="question-card mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title mdl-card--expand">
+          <h2 class="mdl-card__title-text"><span class="question">Q:</span>What can I do to obtain my legal residence?</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <span class="answer">A:</span>
+          <p>Do this, this, this, and this! No problem!</p>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+          <div class="verified-lawyer">Answered by John Doe verified✓ Lawyer from D.C.</div>
+        </div>
+      </div>-->
 
+    <footer class="footer">
+      <div class="translate">
+        <a href="#" class="trans-text en">EN</a>
+        <a href="#" class="trans-text es">ES</a>
+      </div>
     </footer>
 
   </div>
 
+  <script src="https://use.fontawesome.com/e9e8b8d293.js"></script>
   <script src="js/scripts.js"></script>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>
