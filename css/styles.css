@@ -20,6 +20,9 @@ html, body {
 
 /* navbar and menu button styles */
 
+.nav {
+
+}
 
 /* main intro card */
 
@@ -36,8 +39,21 @@ html, body {
 }
 
 .main {
+  background: #2196F3 !important;
   display: flex;
   justify-content: center;
+}
+
+.main-text {
+  font-size: 2.5em !important;
+}
+
+.main-p {
+  font-size: 1.5em !important;
+}
+
+.main-text, .main-p, .main-btn {
+  color: #fff !important;
 }
 
 .learn-more-btn {
@@ -121,4 +137,10 @@ html, body {
 .question-card {
   display: flex;
   flex-direction: column !important;
+}
+
+/* qa page styles */
+.qa-card {
+  padding: 1.5em !important;
+  margin: 0 auto;
 }
