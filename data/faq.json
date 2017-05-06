@@ -1,0 +1,24 @@
+[
+  {
+    "questionEn": "Question text",
+    "answerEn": "Answer to Question",
+    "questionEs": "Pregunta",
+    "answerEs": "Respeuesta",
+    "citation": "Reference for federal code or law",
+    "author": "Lawyer's name",
+    "firm": "Law Firm Name",
+    "date": "date answer written",
+    "lang":"en"
+  },
+  {
+    "question-en": "Question text",
+    "answer-en": "Answer to Question",
+    "question-es": "Pregunta",
+    "answer-es": "Respeuesta",
+    "citation": "Reference for federal code or law",
+    "author": "Lawyer's name",
+    "firm": "Law Firm Name",
+    "date": "date answer written",
+    "lang":"en"
+  }
+]
