@@ -1,6 +1,9 @@
 //jshint esversion: 6
 var http = require("http");
 var data = require("../data/faq");
+var fs = require("fs");
+var auto = fs.readFileSync("./testautocomplete.html");
+var ajax = fs.readFileSync("./js/ajaxcomplete.js");
 
 http.createServer(function(req, res) {
 	if (req.url === "/") {
@@ -10,6 +13,12 @@ http.createServer(function(req, res) {
 		listEnglish(res);
 	} else if (req.url === "/es") {
 		listEspanol(res);
+	} else if (req.url === "/autocomplete") {
+		res.writeHead(200, {"Content-Type": "text/html"});
+		res.end(auto);
+	} else if (req.url === "/js/ajaxcomplete.js") {
+		res.writeHead(200, {"Content-Type": "text/html"});
+		res.end(ajax);
   } else if (req.url.slice(0,7) === "/search") {
     var url = require('url');
     var url_parts = url.parse(req.url, true);

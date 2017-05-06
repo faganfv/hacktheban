@@ -4,7 +4,7 @@
 Making it easy to get answers to your immigration status questions.
 
 ## Usage
-1. Run `node api.js`
+1. Run `node js/api.js`
 2. Visit `http://localhost:3000/` in your browser
 3. `curl` an endpoint for questions as JSON objects.
   * Ex: `curl localhost:3000/search?query=law`
