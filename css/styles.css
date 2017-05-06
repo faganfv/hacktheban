@@ -84,3 +84,7 @@ html, body {
   color: #fff;
   text-decoration: none;
 }
+
+.mdl-textfield {
+  display: block; !important
+}
