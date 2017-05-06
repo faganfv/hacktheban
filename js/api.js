@@ -1,6 +1,6 @@
 //jshint esversion: 6
 var http = require("http");
-var data = require("./data/faq");
+var data = require("../data/faq");
 
 http.createServer(function(req, res) {
 	if (req.url === "/") {
