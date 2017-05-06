@@ -3,7 +3,6 @@ var http = require("http");
 var data = require("./data/faq");
 
 http.createServer(function(req, res) {
-
 	if (req.url === "/") {
 		res.writeHead(200, {"Content-Type": "text/json"});
 	    res.end(JSON.stringify(data));
@@ -11,6 +10,11 @@ http.createServer(function(req, res) {
 		listEnglish(res);
 	} else if (req.url === "/es") {
 		listEspanol(res);
+  } else if (req.url.slice(0,7) === "/search") {
+    var url = require('url');
+    var url_parts = url.parse(req.url, true);
+    var query = url_parts.query;
+    search(res, query);
 	} else {
 		res.writeHead(404, {"Content-Type": "text/plain"});
 		res.end("Whoops... Data not found");
@@ -41,4 +45,21 @@ function listEspanol(res) {
 
 	res.end(JSON.stringify(es));
 
+}
+
+function search(res, query) {
+  searchTerms = query.query;
+  if (searchTerms == undefined) {
+    searchTerms = ""
+  }
+  searchTerms = searchTerms.toLowerCase();
+  var searchTermsArray = searchTerms.split(" ");
+  var search = data.filter(function(item) {
+    let match = true;
+    searchTermsArray.forEach(function(term, index, arr){
+        match = match && JSON.stringify(item).toLowerCase().includes(term)
+      });
+    return match;
+  });
+	res.end(JSON.stringify(search));
 }
