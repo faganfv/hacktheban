@@ -41,7 +41,7 @@ console.log("Express app running on port 3000");
 function listEnglish(res) {
 
 	var en = data.filter(function(item) {
-		return item.answerEn !== null;
+		return (item.answerEn !== null) && (item.answerEn !== "");
 	});
 
 	res.end(JSON.stringify(en));
@@ -51,7 +51,7 @@ function listEnglish(res) {
 function listEspanol(res) {
 
 	var es = data.filter(function(item) {
-		return item.answerEn !== null;
+		return (item.answerEs !== null) && (item.answerEs !== "");
 	});
 
 	res.end(JSON.stringify(es));
