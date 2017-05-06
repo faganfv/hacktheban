@@ -1,0 +1,22 @@
+{
+  "name": "hacktheban",
+  "version": "1.0.0",
+  "description": "Making it easy to get answers to your immigration status questions.",
+  "main": "api.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faganfv/hacktheban.git"
+  },
+  "author": "Team Knowledge is Power",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faganfv/hacktheban/issues"
+  },
+  "homepage": "https://github.com/faganfv/hacktheban#readme"
+}
