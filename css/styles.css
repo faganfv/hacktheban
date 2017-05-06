@@ -14,8 +14,6 @@ html, body {
 }
 
 .container {
-  width: 980px;
-  margin: auto;
   min-height: 100%;
   font-family: 'Roboto', sans-serif;
 }
@@ -118,8 +116,4 @@ html, body {
   margin: 10px;
   color: #fff;
   text-decoration: none;
-}
-
-.mdl-textfield {
-  display: block; !important
 }
