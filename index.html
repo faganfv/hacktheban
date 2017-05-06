@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 
 
   <!--[if lt IE 9]>
@@ -55,17 +55,31 @@
 
     <main class="main">
 
-      <h2 class="main-text logo">Free answers to your immigration questions</h2>
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp intro-card">
+        <div class="mdl-card__title">
+          <h1 class="mdl-card__title-text intro-text">Knowledge is Power</h1>
+        </div>
+      <div class="mdl-card__supporting-text intro-p">
+        All content is written and reviewed by immigration lawyers.
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect learn-more-text">
+          Learn More
+        </a>
+      </div>
+    </div>
 
     </main>
 
-    <section class="cards">
+    <section class="top-q-cards">
       <div class="question-card mdl-card mdl-shadow--2dp">
 
         <div class="demo-card-wide mdl-card mdl-shadow--2dp">
           <div class="mdl-card__title">
 
             <h1 class="mdl-card__title-text">Top Questions</h1>
+
+            <hr>
 
           </div>
 
@@ -104,27 +118,49 @@
 
           <div class="mdl-card__menu">
             <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
+              <i class="material-icons">share</i>
+            </button>
           </div>
+    </section>
+
+    <section class="topics-cards">
+
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+          <h2 class="mdl-card__title-text">Topics</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <ul class="topic-ul">
+              <li class="t-item">
+
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Mauris sagittis pellentesque lacus eleifend lacinia...</a>
+
+              </li>
+              <li class="t-item">
+
+                <i class="fa fa-bolt" aria-hidden="true"></i>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Mauris sagittis pellentesque lacus eleifend lacinia...</a>
+
+              </li>
+              <li class="t-item">
+
+                <i class="fa fa-cubes" aria-hidden="true"></i>
+                <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Mauris sagittis pellentesque lacus eleifend lacinia...</a>
+
+              </li>
+        </div>
+        <div class="mdl-card__menu">
+          <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+             <i class="material-icons">share</i>
+          </button>
         </div>
       </div>
 
-
     </section>
-
-    <!--<div class="question-card mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title mdl-card--expand">
-          <h2 class="mdl-card__title-text"><span class="question">Q:</span>What can I do to obtain my legal residence?</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-          <span class="answer">A:</span>
-          <p>Do this, this, this, and this! No problem!</p>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-          <div class="verified-lawyer">Answered by John Doe verified✓ Lawyer from D.C.</div>
-        </div>
-      </div>-->
 
     <footer class="footer">
       <div class="translate">
@@ -133,8 +169,7 @@
       </div>
     </footer>
 
-  </div>
-
+    </div>
   <script src="https://use.fontawesome.com/e9e8b8d293.js"></script>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </body>

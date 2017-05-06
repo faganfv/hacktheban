@@ -14,28 +14,47 @@ html, body {
 }
 
 .container {
+  width: 980px;
+  margin: auto;
   min-height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* navbar and menu button styles */
 
-.main {
-  min-width: 100%;
-  padding: 1.5em;
-  background-color: #2196F3;
+
+/* main intro card */
+
+.intro-card {
+  background: #01BAEF !important;
 }
 
-.main-text {
+.intro-text, .intro-p {
+  color: #fff !important;
+}
+
+.learn-more-text {
+  color: #fff !important;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.learn-more-btn {
+  background: #F25F5C !important;
+}
+
+.learn-more-text {
   color: #fff;
-  padding: 0;
-  margin: 0;
-  width: 35%;
-  text-shadow: 3px 3px #F25F5C;
+  text-decoration: none;
+  font-style: none;
 }
 
 /* cards container */
 
-.cards {
+.top-q-cards {
   display: flex;
   justify-content: center;
   padding: 1.5em;
@@ -53,33 +72,49 @@ html, body {
   padding: 1em;
 }
 
-.fa-question-circle-o {
+.fa {
   font-size: 2em !important;
   padding: 5px;
+  margin: 0;
+}
+
+/* topics card */
+
+.topics-cards {
+  display: flex;
+  justify-content: center;
+  padding: 1.5em;
+}
+
+.topic-ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
 /* footer */
 
 .footer {
+  padding: 0;
+  margin: 0;
   background: #50514F;
   bottom: 0;
   min-width: 100%;
   height: 10%;
-  position: fixed;
   direction: flex;
   justify-content: center;
 
 }
 
 .translate {
-  padding: 1em;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
 
 .trans-text {
-  padding: 1.5em;
+  bottom: 0;
+  padding: 2em;
   margin: 10px;
   color: #fff;
   text-decoration: none;
