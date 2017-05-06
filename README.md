@@ -13,7 +13,7 @@ Making it easy to get answers to your immigration status questions.
 
 | Endpoint | Response |
 | ---- | ---- |
-| / | Return all questions. |
+| /q | Return all questions. |
 | /en | Return all questions with an English answer |
 | /es | Return all questions with a Spanish answer |
 | /search?query=alpha | Return all questions where any field contains "alpha". Not case sensitive. Matches partial words. |

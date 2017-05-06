@@ -4,11 +4,16 @@ var data = require("../data/faq");
 var fs = require("fs");
 var auto = fs.readFileSync("./testautocomplete.html");
 var ajax = fs.readFileSync("./js/ajaxcomplete.js");
+var index = fs.readFileSync("./index.html");
+var css = fs.readFileSync("./css/styles.css");
 
 http.createServer(function(req, res) {
 	if (req.url === "/") {
+		res.writeHead(200, {"Content-Type": "text/html"});
+	    res.end(index);
+	} else if (req.url === "/q") {
 		res.writeHead(200, {"Content-Type": "text/json"});
-	    res.end(JSON.stringify(data));
+	  res.end(JSON.stringify(data));
 	} else if (req.url === "/en") {
 		listEnglish(res);
 	} else if (req.url === "/es") {
@@ -16,6 +21,9 @@ http.createServer(function(req, res) {
 	} else if (req.url === "/autocomplete") {
 		res.writeHead(200, {"Content-Type": "text/html"});
 		res.end(auto);
+	} else if (req.url === "/css/styles.css") {
+		res.writeHead(200, {"Content-Type": "text/css"});
+		res.end(css);
 	} else if (req.url === "/js/ajaxcomplete.js") {
 		res.writeHead(200, {"Content-Type": "text/html"});
 		res.end(ajax);
