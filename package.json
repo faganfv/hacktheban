@@ -4,6 +4,9 @@
   "description": "Making it easy to get answers to your immigration status questions.",
   "main": "api.js",
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2"
   },
   "devDependencies": {},
   "scripts": {

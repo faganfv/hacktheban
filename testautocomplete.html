@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autocomplete Testing</title>
+  <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/autocomplete.js"></script>-->
+  <!--<link rel="stylesheet" href="css/awesomplete.css" />
+  <script src="js/awesomplete.js" async></script>-->
+</head>
+<body>
+
+<!--<div class="ui-widget">
+  <label for="tags">Questions: </label>
+  <input id="tags">
+</div>-->
+<div class="awesomplete">
+  <label for="tags">Questions: </label>
+  <input type="text" autocomplete="off" id="ajax-example" onKeyUp="callSearch();">
+</div>
+
+<section id="questions"></section>
+
+<script src="js/ajaxcomplete.js" async></script>
+</body>
+</html>
