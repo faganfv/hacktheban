@@ -30,7 +30,7 @@ console.log("Server listening on port 3000");
 function listEnglish(res) {
 
 	var en = data.filter(function(item) {
-		return item.answerEn != null;
+		return item.answerEn !== null;
 	});
 
 	res.end(JSON.stringify(en));
@@ -40,7 +40,7 @@ function listEnglish(res) {
 function listEspanol(res) {
 
 	var es = data.filter(function(item) {
-		return item.answerEn != null;
+		return item.answerEn !== null;
 	});
 
 	res.end(JSON.stringify(es));
@@ -49,15 +49,15 @@ function listEspanol(res) {
 
 function search(res, query) {
   searchTerms = query.query;
-  if (searchTerms == undefined) {
-    searchTerms = ""
+  if (searchTerms === undefined) {
+    searchTerms = "";
   }
   searchTerms = searchTerms.toLowerCase();
   var searchTermsArray = searchTerms.split(" ");
   var search = data.filter(function(item) {
     let match = true;
     searchTermsArray.forEach(function(term, index, arr){
-        match = match && JSON.stringify(item).toLowerCase().includes(term)
+        match = match && JSON.stringify(item).toLowerCase().includes(term);
       });
     return match;
   });
