@@ -134,11 +134,6 @@ html, body {
   text-decoration: none;
 }
 
-.question-card {
-  display: flex;
-  flex-direction: column !important;
-}
-
 /* qa page styles */
 .qa-card {
   padding: 1.5em !important;
